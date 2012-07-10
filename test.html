@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/jquery.pixel-align.js"></script>
+  </head>
+  <body>
+    <p>In Firefox, the squares may be blurry (and change as the page resizes). <button onclick="$.pixelAlignSvgs()">Press me</button> to pixel-align the svgs.</p>
+    &nbsp;<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="f1" x="-20%" y="-20%" width="200%" height="200%" filterRes="120">
+          <feOffset result="offOut" in="SourceAlpha" dx="2" dy="2" />
+          <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+          <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+      </defs>
+      <g transform="translate(5.5,5.5)">
+        <rect width="10" x="30" height="10" rx="2" ry="2" stroke="black" stroke-width="1" fill="white" filter="url(#f1)" />
+        <rect width="10" height="10" rx="2" ry="2" stroke="black" stroke-width="1" fill="white" />
+      </g>
+      </svg>
+  </body>
+</html>
