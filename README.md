@@ -1,3 +1,5 @@
+**NOTE: I neither use nor maintain this project anymore.**
+
 This is a jquery plugin to add a new function that aligns every svg on the page to a pixel boundary. This is
 necessary for Firefox (at least on some platforms) and possibly other browsers as well.
 
